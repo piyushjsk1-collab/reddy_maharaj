@@ -5,15 +5,23 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <title>Luxora Interiors — Modern Space Design Studio</title>
 
-<!-- Google Fonts -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
-<!-- FontAwesome Icons -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
 
 <style>
+:root {
+  --bg-dark: #0a0d0c;
+  --bg-card: #131916;
+  --accent-gold: #e2b857;
+  --accent-green: #2bb673;
+  --text-white: #ffffff;
+  --text-gray: #9ca3af;
+  --border-color: rgba(226, 184, 87, 0.2);
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -26,8 +34,8 @@ html {
 }
 
 body {
-  background: #0b0f0d;
-  color: #f3f4f6;
+  background: var(--bg-dark);
+  color: var(--text-white);
   overflow-x: hidden;
 }
 
@@ -42,9 +50,9 @@ nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background: rgba(11, 15, 13, 0.9);
+  background: rgba(10, 13, 12, 0.9);
   backdrop-filter: blur(12px);
-  border-bottom: 1px solid rgba(37, 211, 102, 0.15);
+  border-bottom: 1px solid var(--border-color);
 }
 
 .logo {
@@ -61,7 +69,7 @@ nav {
   width: 38px;
   height: 38px;
   border-radius: 10px;
-  background: linear-gradient(135deg, #25d366, #128c7e);
+  background: linear-gradient(135deg, var(--accent-gold), var(--accent-green));
   display: flex;
   align-items: center;
   justify-content: center;
@@ -76,19 +84,19 @@ nav {
 
 .nav-links a {
   text-decoration: none;
-  color: #9ca3af;
+  color: var(--text-gray);
   font-size: 14px;
   font-weight: 500;
   transition: 0.3s;
 }
 
 .nav-links a:hover {
-  color: #25d366;
+  color: var(--accent-gold);
 }
 
 .nav-btn {
   text-decoration: none;
-  background: #25d366;
+  background: var(--accent-gold);
   color: #000;
   padding: 11px 22px;
   border-radius: 50px;
@@ -115,27 +123,25 @@ nav {
   text-align: center;
 }
 
-/* RESPONSIVE HERO IMAGE BOX (NO CUTTING) */
 .hero-image-box {
   width: 100%;
   max-width: 350px;
   border-radius: 20px;
   overflow: hidden;
-  border: 1px solid rgba(37, 211, 102, 0.2);
+  border: 1px solid var(--border-color);
   box-shadow: 0 20px 60px rgba(0, 0, 0, 0.6);
   position: relative;
   margin-bottom: 25px;
   display: block;
-  background: #121815;
+  background: var(--bg-card);
   transition: transform 0.3s ease, border-color 0.3s ease;
 }
 
 .hero-image-box:hover {
   transform: translateY(-4px);
-  border-color: rgba(37, 211, 102, 0.6);
+  border-color: var(--accent-gold);
 }
 
-/* Height Auto ensure image doesn't get cropped */
 .hero-image-box img {
   width: 100%;
   height: auto;
@@ -144,7 +150,6 @@ nav {
   display: block;
 }
 
-/* CENTERED HERO BUTTON */
 .hero-btn-wrap {
   display: flex;
   justify-content: center;
@@ -154,7 +159,7 @@ nav {
 
 .hero-btn {
   text-decoration: none;
-  background: #25d366;
+  background: var(--accent-gold);
   color: #000;
   padding: 14px 32px;
   border-radius: 50px;
@@ -165,16 +170,14 @@ nav {
   justify-content: center;
   gap: 10px;
   transition: 0.3s;
-  box-shadow: 0 10px 25px rgba(37, 211, 102, 0.25);
+  box-shadow: 0 10px 25px rgba(226, 184, 87, 0.25);
 }
 
 .hero-btn:hover {
   background: #fff;
   transform: translateY(-3px);
-  box-shadow: 0 15px 30px rgba(255, 255, 255, 0.2);
 }
 
-/* TEXT CONTENT BELOW BUTTON */
 .hero-text-content {
   display: flex;
   flex-direction: column;
@@ -183,9 +186,9 @@ nav {
 }
 
 .hero-tag {
-  background: rgba(37, 211, 102, 0.12);
-  border: 1px solid rgba(37, 211, 102, 0.35);
-  color: #25d366;
+  background: rgba(226, 184, 87, 0.1);
+  border: 1px solid var(--border-color);
+  color: var(--accent-gold);
   padding: 6px 16px;
   border-radius: 30px;
   font-size: 13px;
@@ -202,11 +205,11 @@ nav {
 }
 
 .hero h1 span {
-  color: #25d366;
+  color: var(--accent-gold);
 }
 
 .hero p {
-  color: #9ca3af;
+  color: var(--text-gray);
   font-size: 17px;
   max-width: 700px;
   line-height: 1.7;
@@ -226,26 +229,26 @@ nav {
 }
 
 .stat-card {
-  background: #121815;
+  background: var(--bg-card);
   padding: 32px 24px;
   border-radius: 18px;
-  border: 1px solid rgba(37, 211, 102, 0.15);
+  border: 1px solid var(--border-color);
   text-align: center;
 }
 
 .stat-card h3 {
   font-size: 42px;
-  color: #25d366;
+  color: var(--accent-gold);
   font-weight: 800;
   margin-bottom: 8px;
 }
 
 .stat-card p {
-  color: #9ca3af;
+  color: var(--text-gray);
   font-size: 14px;
 }
 
-/* FULLY RESPONSIVE WIDE BANNER SECTION (NO CROPPING) */
+/* WIDE BANNER SECTION */
 .promo-wide-banner-section {
   padding: 30px 6%;
 }
@@ -255,19 +258,18 @@ nav {
   margin: 0 auto;
   border-radius: 16px;
   overflow: hidden;
-  border: 1px solid rgba(37, 211, 102, 0.2);
+  border: 1px solid var(--border-color);
   box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
   display: block;
-  background: #121815;
+  background: var(--bg-card);
   transition: transform 0.3s ease, border-color 0.3s ease;
 }
 
 .wide-banner-wrap:hover {
   transform: translateY(-4px);
-  border-color: #25d366;
+  border-color: var(--accent-gold);
 }
 
-/* Auto height ensures full banner image is visible */
 .wide-banner-wrap img {
   width: 100%;
   height: auto;
@@ -291,7 +293,7 @@ nav {
 }
 
 .section-header p {
-  color: #9ca3af;
+  color: var(--text-gray);
   font-size: 16px;
   max-width: 600px;
   margin: 0 auto;
@@ -299,23 +301,23 @@ nav {
 
 .services-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 30px;
   max-width: 1150px;
   margin: 0 auto;
 }
 
 .service-card {
-  background: #121815;
+  background: var(--bg-card);
   border-radius: 20px;
   overflow: hidden;
-  border: 1px solid rgba(37, 211, 102, 0.15);
+  border: 1px solid var(--border-color);
   transition: 0.3s;
 }
 
 .service-card:hover {
   transform: translateY(-8px);
-  border-color: rgba(37, 211, 102, 0.5);
+  border-color: var(--accent-gold);
 }
 
 .service-img {
@@ -343,7 +345,7 @@ nav {
 }
 
 .service-content p {
-  color: #9ca3af;
+  color: var(--text-gray);
   font-size: 14px;
   line-height: 1.7;
   margin-bottom: 20px;
@@ -351,9 +353,9 @@ nav {
 
 .service-btn {
   text-decoration: none;
-  background: rgba(37, 211, 102, 0.1);
-  color: #25d366;
-  border: 1px solid rgba(37, 211, 102, 0.3);
+  background: rgba(226, 184, 87, 0.1);
+  color: var(--accent-gold);
+  border: 1px solid var(--border-color);
   padding: 12px;
   border-radius: 12px;
   display: flex;
@@ -366,11 +368,11 @@ nav {
 }
 
 .service-btn:hover {
-  background: #25d366;
+  background: var(--accent-gold);
   color: #000;
 }
 
-/* MID PORTFOLIO BANNER SECTION */
+/* MID PORTFOLIO BANNER */
 .middle-banner-section {
   padding: 40px 6%;
 }
@@ -381,8 +383,8 @@ nav {
   border-radius: 20px;
   overflow: hidden;
   position: relative;
-  background: #121815;
-  border: 1px solid rgba(37, 211, 102, 0.2);
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
   box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5);
 }
 
@@ -405,7 +407,7 @@ nav {
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(to right, rgba(11, 15, 13, 0.92), rgba(11, 15, 13, 0.4));
+  background: linear-gradient(to right, rgba(10, 13, 12, 0.92), rgba(10, 13, 12, 0.4));
   display: flex;
   align-items: center;
   padding: 40px;
@@ -439,7 +441,7 @@ nav {
 .cta-card {
   max-width: 1150px;
   margin: 0 auto;
-  background: linear-gradient(135deg, #25d366, #128c7e);
+  background: linear-gradient(135deg, var(--accent-gold), #c49a37);
   border-radius: 24px;
   padding: 60px 40px;
   text-align: center;
@@ -456,7 +458,7 @@ nav {
   font-size: 16px;
   max-width: 600px;
   margin: 0 auto 30px;
-  font-weight: 500;
+  font-weight: 600;
   opacity: 0.9;
 }
 
@@ -481,9 +483,9 @@ nav {
 
 /* FOOTER */
 footer {
-  background: #060907;
+  background: #050706;
   padding: 60px 6% 30px;
-  border-top: 1px solid rgba(37, 211, 102, 0.1);
+  border-top: 1px solid var(--border-color);
 }
 
 .footer-grid {
@@ -498,10 +500,11 @@ footer {
   font-size: 18px;
   margin-bottom: 20px;
   font-weight: 700;
+  color: var(--accent-gold);
 }
 
 .footer-col p {
-  color: #9ca3af;
+  color: var(--text-gray);
   font-size: 14px;
   line-height: 1.8;
 }
@@ -514,13 +517,13 @@ footer {
 
 .footer-links a {
   text-decoration: none;
-  color: #9ca3af;
+  color: var(--text-gray);
   font-size: 14px;
   transition: 0.3s;
 }
 
 .footer-links a:hover {
-  color: #25d366;
+  color: var(--accent-gold);
 }
 
 .footer-bottom {
@@ -561,7 +564,7 @@ footer {
   .hero { padding-top: 100px; }
   .hero h1 { font-size: 30px; }
   .hero p { font-size: 15px; }
-  .banner-overlay { padding: 20px; position: relative; background: #121815; }
+  .banner-overlay { padding: 20px; position: relative; background: var(--bg-card); }
   .banner-text h3 { font-size: 20px; }
   .cta-card h2 { font-size: 26px; }
   .cta-card { padding: 40px 20px; }
@@ -571,7 +574,6 @@ footer {
 
 <body>
 
-<!-- NAVBAR -->
 <nav>
   <div class="logo">
     <div class="logo-icon"><i class="fa-solid fa-couch"></i></div>
@@ -590,22 +592,18 @@ footer {
   </a>
 </nav>
 
-<!-- HERO SECTION -->
 <section class="hero">
 
-  <!-- 1. FULLY RESPONSIVE CLICKABLE HERO IMAGE -->
   <a href="#" data-wa class="hero-image-box" target="_blank" title="Click to open link">
-    <img src="./image2.jpeg" alt="Hero Interior Space">
+    <img src="./image3.jpeg" alt="Hero Interior Space">
   </a>
 
-  <!-- 2. BUTTON BELOW IMAGE -->
   <div class="hero-btn-wrap">
     <a href="#" data-wa class="hero-btn" target="_blank">
       <i class="fa-brands fa-whatsapp"></i> Book Free Consultation
     </a>
   </div>
 
-  <!-- 3. TEXT & HEADINGS BELOW BUTTON -->
   <div class="hero-text-content">
     <div class="hero-tag"><i class="fa-solid fa-sparkles"></i> Premium Interior Architecture</div>
     <h1>Transform Your Space Into A <span>Modern Masterpiece</span></h1>
@@ -614,7 +612,6 @@ footer {
 
 </section>
 
-<!-- STATS SECTION -->
 <section class="stats">
   <div class="stats-grid">
     <div class="stat-card">
@@ -632,14 +629,12 @@ footer {
   </div>
 </section>
 
-<!-- CLICKABLE WIDE PROMO BANNER SECTION (RESPONSIVE STRIP BANNER) -->
 <section class="promo-wide-banner-section">
   <a href="#" data-wa class="wide-banner-wrap" target="_blank" title="Click to open link">
     <img src="./banner.jpeg" alt="Special Offer Banner">
   </a>
 </section>
 
-<!-- SERVICES SECTION -->
 <section class="services" id="services">
   <div class="section-header">
     <h2>Our Design Services</h2>
@@ -648,7 +643,6 @@ footer {
 
   <div class="services-grid">
     
-    <!-- SERVICE 1 -->
     <div class="service-card">
       <a href="#" data-wa class="service-img" target="_blank">
         <img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=800&q=80" alt="Residential Interior">
@@ -662,7 +656,6 @@ footer {
       </div>
     </div>
 
-    <!-- SERVICE 2 -->
     <div class="service-card">
       <a href="#" data-wa class="service-img" target="_blank">
         <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=800&q=80" alt="Commercial Interiors">
@@ -676,7 +669,6 @@ footer {
       </div>
     </div>
 
-    <!-- SERVICE 3 -->
     <div class="service-card">
       <a href="#" data-wa class="service-img" target="_blank">
         <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=800&q=80" alt="3D Architectural Visualization">
@@ -693,7 +685,6 @@ footer {
   </div>
 </section>
 
-<!-- MID PORTFOLIO BANNER SECTION -->
 <section class="middle-banner-section" id="banner">
   <div class="middle-banner-container">
     <a href="#" data-wa class="middle-banner-link" target="_blank">
@@ -712,7 +703,6 @@ footer {
   </div>
 </section>
 
-<!-- CTA SECTION -->
 <section class="cta-section" id="contact">
   <div class="cta-card">
     <h2>Ready To Redefine Your Space?</h2>
@@ -723,7 +713,6 @@ footer {
   </div>
 </section>
 
-<!-- FOOTER -->
 <footer>
   <div class="footer-grid">
     <div class="footer-col">
@@ -746,8 +735,8 @@ footer {
 
     <div class="footer-col">
       <h4>Contact Info</h4>
-      <p><i class="fa-solid fa-phone" style="color:#25d366; margin-right:8px;"></i> +91 78430 002338</p>
-      <p style="margin-top:10px;"><i class="fa-solid fa-envelope" style="color:#25d366; margin-right:8px;"></i> hello@luxorainteriors.com</p>
+      <p><i class="fa-solid fa-phone" style="color:var(--accent-gold); margin-right:8px;"></i> +91 78430 00238</p>
+      <p style="margin-top:10px;"><i class="fa-solid fa-envelope" style="color:var(--accent-gold); margin-right:8px;"></i> hello@luxorainteriors.com</p>
     </div>
   </div>
 
@@ -756,13 +745,14 @@ footer {
   </div>
 </footer>
 
-<!-- FLOATING WHATSAPP -->
 <a href="#" data-wa class="float-wa" target="_blank">
   <i class="fa-brands fa-whatsapp"></i>
 </a>
 
 <script>
-  const whatsappUrl = "https://wa.me/+917413951362?text=Hello%20I%20Want%20Service";
+  const phoneNumber = "+917413951362";
+  const message = encodeURIComponent("Hello! I am interested in Luxora Interior design services.");
+  const whatsappUrl = `https://wa.me/${phoneNumber}?text=${message}`;
 
   document.querySelectorAll('[data-wa]').forEach(link => {
     link.href = whatsappUrl;
